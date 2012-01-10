@@ -105,7 +105,7 @@ scribed_SOURCES = store.cpp store_queue.cpp conf.cpp file.cpp conn_pool.cpp scri
 if USE_SCRIBE_HDFS
   scribed_SOURCES += HdfsFile.cpp
 endif
-scribed_LDADD = $(EXTERNAL_LIBS) $(INTERNAL_LIBS)
+scribed_LDADD = $(EXTERNAL_LIBS) $(INTERNAL_LIBS) $(AM_LDFLAGS)
 
 if SHARED
 scribed_DEPENDENCIES = libscribe.so
